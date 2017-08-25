@@ -1,0 +1,22 @@
+@import "media.css";
+
+.container {
+  width: 100%;
+  margin-top: 10px;
+  span {
+    display: block;
+    font-weight: 900;
+  }
+}
+
+@media (--phone) {
+  .container {
+    margin-top: 20px;
+  }
+}
+
+@media (--phone), (--tablet) {
+  .container {
+    font-size: 13px;
+  }
+}

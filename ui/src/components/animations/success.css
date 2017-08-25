@@ -1,0 +1,60 @@
+@import "media.css";
+
+.actionsWrapper {
+  position: fixed;
+  top: 15%;
+  left: 40%;
+  width: 150px;
+  height: 100px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.7s;
+  z-index: 3;
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.innerWrapper {
+  display: flex;
+  border: 2px solid #06bd41;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 30px;
+    color: #01ef38;
+  }
+}
+
+.text {
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+@media (--phone) {
+  .actionsWrapper {
+    left: 25%;
+  }
+}
+
+@media (--tablet) {
+  .actionsWrapper {
+    left: 35%;
+  }
+}

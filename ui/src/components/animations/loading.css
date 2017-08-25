@@ -1,0 +1,50 @@
+.loadingWrapper {
+  width: 100px;
+  display: flex;
+  margin: 20px 0;
+}
+
+.left, .middle, .right {
+  width: 20px;
+  height: 20px;
+  background: #f5b143;
+  border: 1px solid #a5a5a5;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.right {
+  animation: right .5s linear infinite;
+}
+
+.middle {
+  animation: middle .5s linear infinite;
+  animation-delay: .1s;
+}
+
+.left {
+  animation: left .5s linear infinite;
+  animation-delay: .2s;
+}
+
+@keyframes right {
+  50% {
+    transform: translateY(-15px);
+    background: #ce8817;
+  }
+
+}
+
+@keyframes middle {
+  50% {
+    transform: translateY(-15px);
+    background: #ce8817;
+  }
+}
+
+@keyframes left {
+  50% {
+    transform: translateY(-15px);
+    background: #ce8817;
+  }
+}

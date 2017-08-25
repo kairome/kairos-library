@@ -1,0 +1,13 @@
+.page {
+  margin-right: 10%;
+
+  a {
+    text-decoration: underline;
+    color: #618bce;
+    transform: scale(1.05);
+  }
+
+  em {
+    font-weight: 900;
+  }
+}

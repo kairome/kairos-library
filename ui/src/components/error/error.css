@@ -1,0 +1,10 @@
+.errorWrapper {
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.errorBody {
+  color: red;
+}

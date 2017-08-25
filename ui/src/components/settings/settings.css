@@ -1,0 +1,54 @@
+@import "media.css";
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  &.passes {
+    margin-top: 50px;
+  }
+}
+
+.formField {
+  lost-column: 5/12;
+}
+
+.changeBtn {
+  padding: 10px;
+  background: #fff2db;
+  color: #bd9006;
+  border: 1px solid #bd9006;
+
+  &:hover {
+    border-color: #f1b90f;
+    color: #f1b90f;
+  }
+}
+
+@media (--phone) {
+  .sectionTitle {
+    font-size: 16px;
+  }
+
+  .formField {
+    lost-column: 8/12;
+  }
+}
+
+@media (--tablet) {
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .formField {
+    lost-column: 6/12;
+  }
+}
+
+@media (--phone), (--tablet) {
+  .formField {
+    font-size: 14px;
+  }
+}

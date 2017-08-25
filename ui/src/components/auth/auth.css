@@ -1,0 +1,74 @@
+@import "media.css";
+
+.formWrapper {
+  lost-column: 5/12;
+}
+
+.header {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.authButton {
+  background: #f3f3f3;
+  color: #f51515;
+  border: 1px solid #222222;
+  margin: auto;
+  padding: 10px;
+
+  &:hover {
+    background: #bd0b0b;
+    color: #fff;
+    border: none;
+  }
+}
+
+.redirectLink {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #06bd41;
+  font-style: italic;
+
+  a {
+    color: #01ef38;
+    font-weight: 900;
+    font-size: 15px;
+    font-style: normal;
+    margin-left: 2px;
+  }
+}
+
+@media (--phone) {
+  .formWrapper {
+    lost-column: 10/12;
+  }
+}
+
+@media (--tablet) {
+  .formWrapper {
+    lost-column: 8/12;
+  }
+}
+
+@media (--phone), (--tablet) {
+  .header {
+    font-size: 20px;
+  }
+
+  .redirectLink {
+    font-size: 12px;
+
+    a {
+      font-size: 13px;
+    }
+  }
+
+  .authButton {
+    font-size: 14px;
+  }
+
+  .formWrapper {
+    font-size: 14px;
+  }
+}

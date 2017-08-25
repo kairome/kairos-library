@@ -1,0 +1,155 @@
+@import "media.css";
+
+.tradeWrapper {
+  display: flex;
+  margin: 30px 0;
+  margin-left: 10px;
+}
+
+.tradeOption {
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 22px;
+  color: #697a89;
+  transition: all .1s ease-in;
+
+  &.chosen {
+    transform-origin: left;
+    transform: scale(1.1);
+    border-bottom: 2px solid #697a89;
+  }
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  margin-right: 20px;
+  padding: 10px;
+  font-weight: 900;
+  color: #0e3471;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab.chosen {
+  background: #697a89;
+  border-radius: 4px;
+  color: #fff;
+
+  .num {
+    background: #ffd6d6;
+    color: #222;
+  }
+}
+
+.num {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -10px;
+  top: 0;
+  font-size: 12px;
+  border-radius: 100%;
+  color: #fff;
+  background: #a52929;
+  padding: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.removeAll {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  lost-column: 4/12;
+  display: flex;
+  flex-direction: column;
+}
+
+.removeBtn {
+  cursor: pointer;
+  transform-origin: left;
+  transition: transform .3s ease-out;
+
+  color: #bd0b0b;
+
+  &:hover {
+    color: #f51515;
+  }
+
+  &.confirming {
+    transform: scale(1.1);
+  }
+}
+
+.confirmation {
+  margin-top: 10px;
+}
+
+.confirmationBtn {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.requests {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.message {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 30px;
+}
+
+@media (--phone) {
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tradeOption {
+    font-size: 16px;
+  }
+
+  .tab {
+    font-size: 14px;
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  .removeAll {
+    lost-column: 6/12;
+  }
+
+  .confirmation {
+    font-size: 14px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}
+
+@media (--tablet) {
+  .tradeOption {
+    font-size: 20px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
+
+  .message {
+    font-size: 18px;
+  }
+}

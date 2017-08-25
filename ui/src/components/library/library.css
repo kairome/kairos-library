@@ -1,0 +1,24 @@
+@import "media.css";
+
+.library {
+  height: 100vh;
+  z-index: 0;
+}
+
+.content {
+  padding-top: 60px;
+}
+
+@media (--desktop) {
+  .content {
+    margin-left: 60px;
+    max-width: 1200px;
+    lost-offset: 2/12;
+  }
+}
+
+@media (--phone), (--tablet) {
+  .content {
+    margin-left: 10%;
+  }
+}

@@ -1,0 +1,389 @@
+@import "media.css";
+
+.booksWrapper {}
+
+.myBooks, .allBooks {
+  margin-top: 20px;
+}
+
+.allBooksContent {}
+
+.message {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  lost-column: 6/12;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.searchText {
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+.searchTabs {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: flex;
+}
+
+.searchTab {
+  margin-left: 10px;
+  cursor: pointer;
+
+  &.chosen {
+    transform: scale(1.1);
+    border-bottom: 1px solid #000;
+  }
+}
+
+.books {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sectionHeader {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.bookRow {
+  font-size: 15px;
+  margin-bottom: 50px;
+  lost-column: 1/3;
+  display: flex;
+}
+
+.bookWrapper {
+  margin-top: auto;
+}
+
+.bookInfo {
+  width: 150px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 5px;
+
+  &.modal {
+    font-size: 15px;
+  }
+}
+
+.authors {
+  font-size: 14px;
+  margin-bottom: 15px;
+  span {
+    font-weight: 900;
+  }
+
+  &.modal {
+    font-size: 13px;
+  }
+}
+
+.image {
+  transition: transform .3s ease-out;
+  width: 130px;
+  height: 200px;
+  box-shadow: 0 0 10px #000;
+  position: relative;
+  cursor: pointer;
+
+  &.modal {
+    width: 200px;
+    height: 300px;
+  }
+
+  &.trade {
+    cursor: default;
+    display: flex;
+    box-shadow: none;
+    width: 250px;
+    height: auto;
+  }
+}
+
+.requestInfo {
+  margin-left: 15px;
+  font-size: 15px;
+  width: 100px;
+
+  span {
+    font-weight: 900;
+  }
+}
+
+.requestAction {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+
+  &.dismiss, &.dismiss i {
+    color: #bd0b0b;
+  }
+}
+
+.thumbnail {
+  width: 130px;
+  height: 200px;
+
+  &.modal {
+    width: 200px;
+    height: 300px;
+  }
+
+  &.trade {
+    box-shadow: 0 0 10px #000;
+  }
+}
+
+/* Modal styles */
+
+.bookDetails {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.generalInfo {
+  width: 20%;
+  padding: 0 20px;
+
+  span {
+    font-weight: 900;
+  }
+
+  div {
+    margin-bottom: 10px;
+  }
+}
+
+.description {
+  width: 100%;
+  padding-right: 20px;
+
+  & :first-child {
+    margin: 0;
+  }
+}
+
+%actionBtn {
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+:global {
+  i.fa.fa-spinner :local {
+    animation: spin 1s linear infinite;
+    color: black;
+  }
+}
+
+.addBtn,  .requestTrade, .approveRequest {
+  @extend %actionBtn;
+
+  color: #bd9006;
+
+  &:hover {
+    color: #f1b90f;
+  }
+}
+
+.approveRequest {
+  @extend %actionBtn;
+
+  color: #0ebd06;
+
+  &:hover {
+    color: #0ff124;
+  }
+}
+
+.removeBtn, .dismissRequest, .denyRequest {
+  @extend %actionBtn;
+
+  color: #bd0b0b;
+
+  &:hover {
+    color: #f51515;
+  }
+}
+
+.tradeActions, .dismissRequest {
+  width: 130px;
+}
+
+.cover {
+  background: rgba(189, 144, 6, .6);
+  width: 130px;
+  height: 200px;
+  position: absolute;
+  transition: background .3s ease-out;
+}
+
+@media (--desktop) {
+  .cover:hover {
+    animation: lighten .5s;
+    background: rgba(189, 144, 6, 0);
+  }
+
+  .image:hover {
+    animation: scale .5s;
+    transform: scale(1.2);
+
+    &.trade {
+      animation: none;
+      transform: none;
+    }
+  }
+}
+
+/* Mobile */
+
+@media (--phone) {
+  .search {
+    lost-column: 8/12;
+  }
+
+  .bookDetails {
+    flex-wrap: wrap;
+  }
+
+  .generalInfo {
+    width: 30%;
+  }
+
+  .description {
+    padding: 20px 30px 20px 0;
+  }
+
+  .image, .thumbnail, .cover {
+    width: 100px;
+    height: 150px;
+
+    &.modal {
+      width: 100px;
+      height: 150px;
+    }
+  }
+
+  .bookInfo, .tradeActions, .dismissRequest {
+    width: 100px;
+  }
+
+  .image.trade {
+    display: block;
+  }
+
+  .requestInfo {
+    margin: 0;
+    word-wrap: break-word;
+  }
+}
+
+@media (--tablet) {
+  .search {
+    display: block;
+    margin-bottom: 40px;
+    lost-column: 6/12;
+  }
+
+  .description {
+    padding-bottom: 20px;
+  }
+
+  .image, .thumbnail, .cover {
+    width: 120px;
+    height: 175px;
+
+    &.modal {
+      width: 120px;
+      height: 175px;
+    }
+  }
+
+  .bookInfo {
+    width: 120px;
+  }
+}
+
+@media (--phone), (--tablet) {
+  .search {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .searchText {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .searchTabs {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .bookRow {
+    lost-column: 1/2;
+  }
+
+  .title, .search, .requestInfo {
+    font-size: 13px;
+
+    &.modal {
+      font-size: 13px;
+    }
+  }
+
+  .generalInfo, .description, .authors {
+    font-size: 12px;
+
+    &.modal {
+      font-size: 12px;
+    }
+  }
+
+  .sectionHeader {
+    font-size: 20px;
+  }
+
+  %actionBtn {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Animations */
+
+@keyframes scale {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+@keyframes lighten {
+  from {
+    background: rgba(189, 144, 6, .6);
+  }
+
+  to {
+    background: rgba(189, 144, 6, 0);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

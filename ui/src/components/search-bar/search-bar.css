@@ -1,0 +1,15 @@
+.searchBar {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+
+  input {
+    height: 100%;
+    border-radius: 4px;
+    padding: 5px;
+  }
+}
+
+.clearButton {
+  margin-left: 10px;
+}
