@@ -41,7 +41,7 @@ if (node === 'production') {
     },
   }));
 
-  app.use(serve(buildDir, { index: 'index.html'}));
+  app.use(serve(buildDir));
   app.use(async (ctx) => {
     const appHtml = renderReact(ctx.url, {});
     await ctx.render('template', {
