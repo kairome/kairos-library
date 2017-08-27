@@ -31,7 +31,7 @@ build-server:
 	webpack --config server.config.js -p  --progress
 
 prod: build-prod build-server
-	NODE_ENV=production node ./server/index.js
+	NODE_ENV=production nohup node ./server/index.js &
 
 build: install prod
 
