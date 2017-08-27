@@ -2,7 +2,7 @@
 
 import request from 'superagent';
 
-const api = process.env.API_URL ? process.env.API_URL : 'http://localhost:8080';
+const api = process.env.API_URL ? process.env.API_URL : 'http://localhost:8000';
 
 export const makeRequest = (requestType: string, url: string, data?: Object) => {
   const headers = {

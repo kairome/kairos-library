@@ -17,13 +17,11 @@ const buildDir = path.resolve(__dirname, '../build/public');
 
 const node = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 const port = process.env.PORT ? process.env.PORT : 3000;
-const api = process.env.API_URL ? process.env.API_URL : 'http://localhost:8080';
+const api = process.env.API_URL ? process.env.API_URL : 'http://localhost:8000';
 const proxyServer = process.env.EXTERNAL_SERVER;
 
 if (node === 'development') {
   app.use(logger());
-  console.info(info('API host ') + link(api));
-  console.info(info('Listening on port ') + link(`http://localhost:${port}`));
 }
 
 if (proxyServer) {
@@ -54,5 +52,8 @@ if (node === 'production') {
     match: /\/|\/*.(js|css)$/,
   }));
 }
+
+console.info(info('API host ') + link(api));
+console.info(info('Listening on port ') + link(`http://localhost:${port}`));
 
 app.listen(port);
