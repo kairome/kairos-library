@@ -12,6 +12,8 @@ const { renderReact } = require('../lib/server-rendering');
 const info = clc.cyanBright.bold;
 const link = clc.magentaBright.bold.underline;
 
+require('dotenv').config();
+
 const app = new Koa();
 const buildDir = path.resolve(__dirname, '../build/public');
 
