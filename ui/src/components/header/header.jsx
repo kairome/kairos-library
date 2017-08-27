@@ -40,7 +40,7 @@ class Header extends Component<Props, State> {
         <div className={s.authInfo}>
           <div className={s.name}>Hi, <span>{this.props.userName}</span></div>
           <div><Link to="/settings">Settings <i className="fa fa-cog"/></Link></div>
-          <Link to="/logout" onClick={this.handleLogout}>Logout <i className="fa fa-sign-out"/></Link>
+          <div className={s.logout} onClick={this.handleLogout}>Logout <i className="fa fa-sign-out"/></div>
         </div>
       );
     }
@@ -57,7 +57,7 @@ class Header extends Component<Props, State> {
       return (
         <div className={s.authInfo}>
           <div className={s.name}>Hi, <span>{this.props.userName}</span></div>
-          <Link className={s.logout} to="/logout" onClick={this.handleLogout}>Logout <i className="fa fa-sign-out"/></Link>
+          <div className={s.logout} onClick={this.handleLogout}>Logout <i className="fa fa-sign-out"/></div>
         </div>
       );
     }
