@@ -13,6 +13,6 @@ launch: build
 	test -f .env && export eval `cat .env` || true && ./build/expire
 
 prod: prepare build
-	test -f .env && export eval `cat .env` || true && ./build/expire 2>&1 | tee -a $(LOG_PATH)
+	test -f .env && export eval `cat .env` || true && nohup ./build/expire > $(LOG_PATH) &
 
 .PHONY: prepare build launch prod
