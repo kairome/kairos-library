@@ -79,6 +79,7 @@ class Signup extends Component<Props, State> {
 
   handlePassword = ({target}: SyntheticInputEvent<*>) => {
     this.setState({ password: target.value });
+    confirmPassword(this.state.confirm, target.value, this.confirmPasswordInput);
   }
 
   handleConfirm = ({target}: SyntheticInputEvent<*>) => {
