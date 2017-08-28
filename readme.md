@@ -1,6 +1,9 @@
 # The Library of Kairos
 
+If you want to try it out, you can sign up with any fake email, or simply use `guest@example.com/guest`
+ 
 **Online [demo](http://kairome.com)**
+
 
 ## Concept
 
