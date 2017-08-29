@@ -20,6 +20,7 @@ body {
 a, button, input {
   outline: 0;
   text-decoration: none;
+  box-shadow: none;
 }
 
 input::-webkit-input-placeholder {
