@@ -1,10 +1,5 @@
 # The Library of Kairos
 
-If you want to try it out, you can sign up with any fake email, or simply use `guest@example.com/guest`
- 
-**Online [demo](http://kairome.com)**
-
-
 ## Concept
 
 The app is a hybrid between a bookshelf and a trading club. You can add/remove books as well as trade them.
